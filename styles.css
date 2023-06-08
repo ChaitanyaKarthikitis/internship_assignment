@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/* Main parent class */
+.container{
+    background-color: #0b0423;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Boxes */
+.left_box , .right_box{
+    border: 2px dashed white;
+    width: 27%;
+    height: 450px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Child element of left container */
+.list{
+    color: white;
+    width: 75%;
+    background-color: rgb(203, 23, 185);
+    height: 15%;
+    margin: 20px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+/* Box upon dragging */
+.left_box .dragging{
+    border: 2px dotted  ;
+    opacity: 0.3;
+    background-color: red;
+    /* background-color: green; */
+}
+
+
+
+/* Reset button */
+.btn{
+    position: absolute;
+    /* top: 0; */
+    cursor: pointer;
+    background-color: rgb(250, 240, 105);
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 5px;
+
+}
+
+
+
+/* Media query for small screen */
+@media (max-width: 600px) {
+    .left_box,
+        .right_box {
+            border: 2px dashed white;
+            width: 40%;
+            height: 450px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+}
